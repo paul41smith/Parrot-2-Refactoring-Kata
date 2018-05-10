@@ -2,11 +2,18 @@ package parrot;
 
 public final class ParrotAfrican extends Parrot {
 
-    public ParrotAfrican(ParrotTypeEnum _type, int numberOfCoconuts, double voltage, boolean isNailed) {
-        super(_type, numberOfCoconuts, voltage, isNailed);
+    protected ParrotTypeEnum type;
+
+    public ParrotAfrican(int numberOfCoconuts, double voltage, boolean isNailed) {
+        super(numberOfCoconuts, voltage, isNailed);
+        this.type = ParrotTypeEnum.AFRICAN;
     }
 
     public double getSpeed() {
         return Math.max(0, getBaseSpeed() - getLoadFactor() * numberOfCoconuts);
+    }
+
+    public String getType() {
+        return String.valueOf(type);
     }
 }
