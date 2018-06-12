@@ -2,7 +2,7 @@ package parrot;
 
 public final class ParrotEuropean extends Parrot {
 
-    protected ParrotTypeEnum type;
+    private ParrotTypeEnum type;
 
     public ParrotEuropean(int numberOfCoconuts, double voltage, boolean isNailed) {
         super(numberOfCoconuts, voltage, isNailed);
